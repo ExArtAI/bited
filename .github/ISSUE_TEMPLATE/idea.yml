@@ -1,0 +1,33 @@
+name: Идея или опыт / Idea or experience
+description: Рассказать о затруднении, предложить улучшение / Share a need or suggest an improvement
+title: "[Feedback]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Обращение публичное. Не вставляйте приватные тексты. Идея не означает обязательство включить функцию. / Public report. No private writing. Suggestions are not delivery commitments."
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Тип / Type
+      options:
+        - Затруднение / Difficulty
+        - Предложение / Suggestion
+        - Опыт использования / Experience
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Чего вы хотели добиться? / What were you trying to achieve?
+    validations:
+      required: true
+  - type: textarea
+    id: experience
+    attributes:
+      label: Что мешало или помогло? / What got in the way or helped?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Возможное улучшение / Possible improvement

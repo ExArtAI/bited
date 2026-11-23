@@ -1,0 +1,50 @@
+name: Ошибка / Bug report
+description: Сообщить об ошибке без личных материалов / Report a reproducible problem
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Все обращения публичны. Не прикладывайте ключи, токены, приватные миры и рукописи. / All reports are public. Never include credentials or private projects."
+  - type: input
+    id: version
+    attributes:
+      label: Версия Bited / Bited version
+      placeholder: "Например / e.g. 0.5 preview"
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: ОС и масштаб экрана / OS and display scaling
+      placeholder: "Windows 11, 125%"
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Шаги воспроизведения / Steps to reproduce
+      description: Используйте короткий вымышленный пример / Use a small fictional example
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ожидалось / Expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Получилось / Actual
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Модель и способ подключения, если связано с ИИ / Model and connection, if AI-related
+      description: Только название и local/cloud, без ключа / Name and local/cloud only, no API key
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Проверка / Check
+      options:
+        - label: В обращении нет ключей и приватных творческих материалов / No credentials or private creative content included
+          required: true
